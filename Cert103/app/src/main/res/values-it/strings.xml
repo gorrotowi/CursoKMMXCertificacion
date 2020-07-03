@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cert103</string>
+    <string name="profile">Perfil: Andy</string>
+    <string name="more">Mas</string>
+    <string name="snackbar_show_bio">Mostrando Bio</string>
+    <string name="snackbar_action_back">Atras</string>
+    <string name="hello">Alo mondo</string>
+    <string name="helloW">Alo moooondo</string>
+</resources>
