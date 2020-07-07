@@ -1,0 +1,4 @@
+include ':LocalStorage'
+include ':repository'
+include ':app'
+rootProject.name = "Cert105"
