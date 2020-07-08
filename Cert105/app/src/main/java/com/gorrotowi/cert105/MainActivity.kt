@@ -1,6 +1,7 @@
 package com.gorrotowi.cert105
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -25,12 +26,22 @@ class MainActivity : AppCompatActivity() {
         viewModel.name.observe(this, Observer { name ->
             txtName?.text = name
         })
+
+        viewModel.booksList.observe(this, Observer { listBooks ->
+            Log.d("Books", "${listBooks?.map { it.toString() }}")
+        })
     }
 
     private fun setUpListeners() {
         btnGetName?.setOnClickListener {
             val name = edtxtName?.text?.toString() ?: ""
-            viewModel.setName(name)
+//            viewModel.setName(name)
+            viewModel.addBook(name)
+        }
+
+        btnGetBooks?.setOnClickListener {
+            viewModel.getBooksByFlow()
+//            viewModel.getBooks()
         }
     }
 }

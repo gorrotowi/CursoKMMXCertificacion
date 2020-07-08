@@ -14,6 +14,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
+
     abstract fun bookDAO(): DaoBooks
 
     companion object {
@@ -24,18 +25,11 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
-        private val MIGRATION2_3 = object : Migration(1, 2) {
-            override fun migrate(database: SupportSQLiteDatabase) {
-                database.execSQL("ALTER TABLE book_table ADD COLUMN editorial TEXT")
-            }
-        }
-
         fun instance(ctx: Context): AppDatabase {
             synchronized(this) {
                 val db by lazy {
                     Room.databaseBuilder(ctx, AppDatabase::class.java, "MYAPPDB")
                         .addMigrations(MIGRATION1_2)
-                        .addMigrations(MIGRATION2_3)
                         .build()
                 }
                 return db
