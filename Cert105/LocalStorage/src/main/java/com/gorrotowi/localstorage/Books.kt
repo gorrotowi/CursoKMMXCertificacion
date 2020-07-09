@@ -1,6 +1,7 @@
 package com.gorrotowi.localstorage
 
 import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -12,5 +13,11 @@ data class Book(
     @ColumnInfo(name = "author_book")
     val author: String,
     val ISNB: String,
-    val editorial: String
+    @Embedded
+    val editorial: Editorial
+)
+
+@Entity
+data class Editorial(
+    val name: String
 )
