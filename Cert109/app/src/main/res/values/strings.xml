@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cert109</string>
+    <string name="hello_login">Hello Login</string>
+    <string name="email">Email</string>
+    <string name="imagen_de_login">Imagen de login</string>
+    <string name="login_email">Email para hacer login</string>
+    <string name="login">Login</string>
+    <string name="password">contraseña</string>
+    <string name="password_desc">Ingresa tu password para hacer login</string>
+</resources>

@@ -1,0 +1,41 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Dark" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@color/colorBlack</item>
+    </style>
+
+    <style name="TextLogin">
+        <item name="android:textColor">@color/colorTexts</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="ButtonBigText" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="icon">@drawable/ic_door_login</item>
+        <item name="iconTint">@color/colorTexts</item>
+    </style>
+
+    <style name="GenericEditText">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SpecialEditText" parent="GenericEditText">
+        <item name="android:textColor">@color/colorTexts</item>
+    </style>
+
+    <color name="colorBlack">#000000</color>
+</resources>

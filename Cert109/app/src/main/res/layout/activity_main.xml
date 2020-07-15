@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/txtLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:text="@string/hello_login" />
+
+    <TextView
+        android:id="@+id/txtLoginEmailDesc"
+        style="@style/TextLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:contentDescription="@string/email"
+        android:text="@string/email" />
+
+    <EditText
+        android:id="@+id/edtxtLoginEmail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/login_email"
+        android:inputType="textEmailAddress"
+        android:labelFor="@id/txtLoginEmailDesc"
+        android:minHeight="70dp" />
+
+
+    <TextView
+        android:id="@+id/txtLoginPasswDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:contentDescription="@string/password_desc"
+        android:text="@string/password"
+        android:textColor="@color/colorTexts"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edtxtLoginPasswrd"
+        style="@style/GenericEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/password"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        style="@style/ButtonBigText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login" />
+
+</LinearLayout>
